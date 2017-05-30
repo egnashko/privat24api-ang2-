@@ -2,10 +2,10 @@
     <h3>Module exchange works</h3>
     <div *ngIf="data" class="exchange">
         <ul>
-            <li *ngFor="let item of data" class="exchange__p usd">
+            <li *ngFor="let item of data | slice:0:3" class="exchange__p usd">
                 <span>{{ item.ccy }}</span>
-                <span>Buy: {{ item.buy | currency:'UAH' }}</span>
-                <span>Sale: {{ item.sale | currency:'UAH' }}</span>
+                <span>Buy: {{ item.buy | currency:'UAH':true }}</span>
+                <span>Sale: {{ item.sale | currency:'UAH':true }}</span>
             </li>
         </ul>
     </div>
