@@ -1,0 +1,12 @@
+<section>
+    <h3>Module exchange works</h3>
+    <div *ngIf="data" class="exchange">
+        <ul>
+            <li *ngFor="let item of data" class="exchange__p usd">
+                <span>{{ item.ccy }}</span>
+                <span>Buy: {{ item.buy | currency:'UAH' }}</span>
+                <span>Sale: {{ item.sale | currency:'UAH' }}</span>
+            </li>
+        </ul>
+    </div>
+</section>
