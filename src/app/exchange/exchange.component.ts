@@ -23,12 +23,7 @@ export class ExchangeComponent implements OnInit {
   // }
 
   ngOnInit() {
-    this.httpService.getService(this.host).subscribe(
-      data => {
-        return this.data = data,
-        console.log(this.data);
-      }
-    );
+    this.httpService.httpGet(this.host).subscribe(data => this.data = data);
   }
 
 }

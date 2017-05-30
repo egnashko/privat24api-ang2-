@@ -12,6 +12,7 @@ import { ExchangeComponent } from './exchange/exchange.component';
 import { HttpService } from './services/http.service';
 
 const appRoutes: Routes = [
+  { path: '', component: AtmSearchComponent },
   { path: 'atm-search', component: AtmSearchComponent },
   { path: 'post', component: PostComponent },
   { path: 'bonus-plus', component: BonusPlusComponent },

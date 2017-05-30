@@ -1,4 +1,12 @@
 <section>
   <app-exchange></app-exchange>
   <h3>Module post works</h3>
+  <div *ngIf="data">
+    <div *ngFor="let post of data">
+      <p>{{ post.id }}</p>
+      <p>{{ post.title }}</p>
+      <img [src]="post.img" alt="">
+    </div>
+  </div>
+
 </section>

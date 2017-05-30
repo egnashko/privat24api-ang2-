@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { environment } from 'environments/environment';
+
+import { HttpService } from '../services/http.service';
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  private host;
+  private data;
+
+  constructor(private httpService: HttpService) {
+    this.host = environment.postOfficeHost;
+  }
 
   ngOnInit() {
+    this.httpService.httpGet(this.host).subscribe(data => this.data = data.services);
   }
 
 }
