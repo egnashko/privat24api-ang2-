@@ -15,7 +15,7 @@ export class BonusPlusComponent implements OnInit {
   private data;
 
   constructor(private httpService: HttpService) {
-    this.host = environment.bonusPlusHost;
+    this.host = 'environment.bonusPlusHost';
   }
 
   ngOnInit() {

@@ -11,10 +11,4 @@ app.get('/getActiveServices', function (req, res) {
   })
 });
 
-// app.get('/getBonusPlusPartners', function (req, res) {
-//   request('https://bpk-postamat.privatbank.ua/api/getActiveServices', function (error, response, body){
-//     res.send(body);
-//   })
-// });
-
 app.listen(3000);

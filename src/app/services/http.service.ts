@@ -18,6 +18,13 @@ export class HttpService {
       .catch(this.handleError);
   }
 
+  httpPost(): Observable<any> {
+    return this.http
+      .get('https://www.googleapis.com/geolocation/v1/geolocate\?key\=AIzaSyCdGop6paj6WoqfxkdtgGRRDaCXgB9wleI')
+      .map(res => res.json())
+      .catch(this.handleError);
+  }
+
 // Was some problem with post offices requets but jsonP didn't help with it because
 // privat server can't give jsonP callback so deside to write little nose server "serve.js"
 

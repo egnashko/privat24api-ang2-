@@ -10,6 +10,9 @@ import { PostComponent } from './post/post.component';
 import { BonusPlusComponent } from './bonus-plus/bonus-plus.component';
 import { ExchangeComponent } from './exchange/exchange.component';
 import { HttpService } from './services/http.service';
+import { GeolocationService } from './services/location.service';
+
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 const appRoutes: Routes = [
   { path: '', component: AtmSearchComponent },
@@ -31,10 +34,14 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCdGop6paj6WoqfxkdtgGRRDaCXgB9wleI'
+    })
   ],
   providers: [
-    HttpService
+    HttpService,
+    GeolocationService
   ],
   bootstrap: [
     AppComponent
