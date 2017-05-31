@@ -1,0 +1,19 @@
+.navigation {
+    background: aqua;
+    nav {
+        a {
+            font-size: 18px;
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none !important;
+            color: black;
+            transition: 300ms;
+            border: 1px solid black;
+            border-radius: 6px;
+            margin: 10px 15px;
+            &:hover {
+                transform: scale(1.2)
+            }
+        }
+    }
+}
